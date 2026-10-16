@@ -1,43 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive student portfolio showcasing skills, projects, and contact information.">
+  <title>Yalini | Student Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
-
-    <header>
-        <h1>My Website</h1>
-    </header>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="#home" aria-label="Yalini home">Y<span>.</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" title="Toggle light/dark theme">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+      </button>
     </nav>
+  </header>
 
-    <main>
+  <main id="main">
+    <section class="hero container" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> STUDENT • ASPIRING DEVELOPER</p>
+        <h1 id="hero-title">Hello, I'm <span class="gradient-text">Yalini.</span><br>Building ideas for the web.</h1>
+        <p class="hero-description">I’m learning to create accessible, responsive, and user-friendly websites using modern web technologies.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+          <a class="button button-quiet" href="#contact">Let's connect</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>01</strong><span>Curious mind</span></div>
+          <div><strong>02</strong><span>Always learning</span></div>
+          <div><strong>03</strong><span>Creative problem solver</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Decorative abstract portfolio illustration" role="img">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-card card-back"><span class="code-dot"></span><span class="code-dot"></span><span class="code-dot"></span><div class="code-line long"></div><div class="code-line"></div><div class="code-line short"></div></div>
+        <div class="art-card card-front">
+          <div class="mini-window"><span></span><span></span><span></span><b>portfolio.html</b></div>
+          <div class="code-snippet"><p><i>&lt;section&gt;</i></p><p class="indent">Design <em>with</em></p><p class="indent"><strong>purpose</strong><b>.</b></p><p><i>&lt;/section&gt;</i></p></div>
+          <div class="art-bottom"><span>HTML</span><span>CSS</span><span>JS</span></div>
+        </div>
+        <div class="floating-badge badge-star" aria-hidden="true">✳</div>
+        <div class="floating-badge badge-bracket" aria-hidden="true">{ }</div>
+        <div class="art-glow"></div>
+      </div>
+    </section>
 
-        <section>
-            <h2>Welcome</h2>
-            <p>Welcome to my website.</p>
-        </section>
+    <section class="section container" id="about" aria-labelledby="about-title">
+      <div class="section-heading">
+        <p class="eyebrow">A LITTLE ABOUT ME</p>
+        <h2 id="about-title">Learning today.<br><span class="gradient-text">Creating tomorrow.</span></h2>
+      </div>
+      <div class="about-grid">
+        <p class="about-lead">I enjoy turning concepts into clean, practical web experiences. Every project is a chance to learn something new, improve my skills, and pay attention to the little details.</p>
+        <div class="about-note"><span class="note-icon" aria-hidden="true">✦</span><div><h3>My approach</h3><p>Start with a clear structure, make it accessible, then bring it to life with thoughtful design and responsive layouts.</p></div></div>
+      </div>
+    </section>
 
-        <article>
-            <h2>About Me</h2>
-            <p>This is my first semantic HTML webpage.</p>
+    <section class="section section-tinted" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="eyebrow">WHAT I'M EXPLORING</p>
+          <h2 id="skills-title">My current toolkit</h2>
+          <p class="section-intro">The foundations I use to build and improve my projects.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card"><div class="skill-icon html-icon">5</div><h3>HTML5</h3><p>Semantic structure, accessible content, and meaningful page sections.</p><span class="skill-tag">Structure</span></article>
+          <article class="skill-card"><div class="skill-icon css-icon">✳</div><h3>CSS3</h3><p>Grid, Flexbox, custom properties, animations, and responsive layouts.</p><span class="skill-tag">Design</span></article>
+          <article class="skill-card"><div class="skill-icon js-icon">JS</div><h3>JavaScript</h3><p>Learning interactivity, DOM events, and small helpful features.</p><span class="skill-tag">Interaction</span></article>
+          <article class="skill-card"><div class="skill-icon git-icon">⌘</div><h3>Git & GitHub</h3><p>Practising version control and sharing projects online.</p><span class="skill-tag">Workflow</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading project-heading">
+        <div><p class="eyebrow">SELECTED WORK</p><h2 id="projects-title">Projects in progress</h2></div>
+        <p class="section-intro">A few ideas and practice projects from my learning journey.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card project-featured">
+          <div class="project-visual visual-purple"><span class="visual-label">01 / WEB DESIGN</span><div class="mock-browser"><div class="mock-top"><i></i><i></i><i></i></div><div class="mock-content"><span class="mock-kicker">WELCOME TO MY SPACE</span><b>Make it<br>meaningful.</b><span class="mock-button"></span><div class="mock-circle"></div></div></div></div>
+          <div class="project-info"><div><h3>Semantic Portfolio</h3><p>A personal website built with semantic HTML and a responsive CSS architecture.</p></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+          <div class="project-tags"><span>HTML5</span><span>CSS Grid</span><span>Flexbox</span></div>
         </article>
+        <article class="project-card">
+          <div class="project-visual visual-green"><span class="visual-label">02 / CONCEPT</span><div class="eco-art"><div class="eco-sun"></div><div class="eco-hill hill-one"></div><div class="eco-hill hill-two"></div><div class="eco-bin">↻</div></div></div>
+          <div class="project-info"><div><h3>Smart Waste Concept</h3><p>A visual concept exploring a cleaner, smarter waste-management experience.</p></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+          <div class="project-tags"><span>UI Concept</span><span>Environment</span></div>
+        </article>
+        <article class="project-card">
+          <div class="project-visual visual-orange"><span class="visual-label">03 / PRACTICE</span><div class="layout-art"><div class="layout-block block-a"></div><div class="layout-block block-b"></div><div class="layout-block block-c"></div><div class="layout-block block-d"></div><div class="layout-block block-e"></div></div></div>
+          <div class="project-info"><div><h3>Responsive Layout Lab</h3><p>A collection of layout experiments using CSS Grid and mobile-first breakpoints.</p></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+          <div class="project-tags"><span>Responsive CSS</span><span>UI Practice</span></div>
+        </article>
+      </div>
+      <p class="project-disclaimer">Project descriptions are editable examples. Replace them with your actual work as you complete each project.</p>
+    </section>
 
-        <aside>
-            <h3>Quick Information</h3>
-            <p>HTML is used to create webpages.</p>
-        </aside>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-inner">
+        <div><p class="eyebrow">HAVE A PROJECT IN MIND?</p><h2 id="contact-title">Let's make something<br><span class="gradient-text">great together.</span></h2><p class="contact-copy">I'm always happy to learn, collaborate, and connect with people who love building things.</p></div>
+        <div class="contact-card"><span class="contact-symbol" aria-hidden="true">✉</span><h3>Get in touch</h3><p>Replace this placeholder with your preferred email or profile link.</p><a class="button button-primary" href="mailto:your-email@example.com">Email me <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+  </main>
 
-    </main>
-
-    <footer>
-        <p>© 2026 My Website</p>
-    </footer>
-
+  <footer class="site-footer">
+    <div class="container footer-inner"><a class="logo" href="#home">Y<span>.</span></a><p>Designed with curiosity and built with care.</p><a href="#home" class="back-top">Back to top ↑</a><small>© <span id="year"></span> Yalini</small></div>
+  </footer>
 </body>
 </html>
